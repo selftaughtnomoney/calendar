@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+
+  <link href='packages/core/main.css' rel='stylesheet' />
+  <link href='packages/daygrid/main.css' rel='stylesheet' />
+
+  <script src='packages/core/main.js'></script>
+  <script src='packages/daygrid/main.js'></script>
+
+
+  <script src='packages/google-calendar/main.js'></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['dayGrid', 'googleCalendar',],
+
+              googleCalendarApiKey: 'AIzaSyAajJPG7btaAA1h9CCp6sZ8uY99PoKepQ0',
+              events: {
+                googleCalendarId: 'johndominicvillalino@gmail.com'
+              }
+            });
+
+            calendar.render();
+          });
+  </script>
+</head>
+
+<body>
+
+  <div id='calendar'></div>
+
+</body>
+
+</html>
